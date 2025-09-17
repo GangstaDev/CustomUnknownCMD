@@ -83,7 +83,6 @@ public class UnknownCMDCommand implements CommandExecutor, TabCompleter {
         sender.sendMessage(ColorUtil.colorize("&6=== &eCustomUnknownCMD Help &6==="));
         sender.sendMessage(ColorUtil.colorize("&e/unknowncmd reload &7- Reload the configuration"));
         sender.sendMessage(ColorUtil.colorize("&e/unknowncmd set <message> &7- Set the unknown command message"));
-        sender.sendMessage(ColorUtil.colorize("&7Example: /unknowncmd set &cUnknown Command!"));
     }
 
     @Override
