@@ -1,0 +1,6 @@
+message: '&cUnknown command!'
+
+# SINGLE HEX & GRADIENT EXAMPLES
+
+#message: '&#FFD700&lUnknown command!'
+#message: '&l&gradient:#FFD700:#FFA500:#FF8C00:#FF6347&Unknown command!'

@@ -1,0 +1,17 @@
+name: CustomUnknownCMD
+version: '1.0-SNAPSHOT'
+main: org.gangsta.customUnknownCMD.CustomUnknownCMD
+author: Gangsta
+api-version: '1.21'
+
+commands:
+  unknowncmd:
+    description: Main command for CustomUnknownCMD
+    usage: /unknowncmd <reload|set> [message]
+    permission: customunknowncmd.admin
+    aliases: [ucmd, unknowncmd]
+
+permissions:
+  customunknowncmd.admin:
+    description: Allows access to CustomUnknownCMD admin commands
+    default: op
