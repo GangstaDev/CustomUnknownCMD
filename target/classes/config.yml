@@ -1,6 +1,11 @@
 message: '&cUnknown command!'
 
-# SINGLE HEX & GRADIENT EXAMPLES
+# List any commands here that cause conflicts
+exempt-commands:
+  - "exemptcommand1"
+  - "exemptcommand2"
+  - "exemptcommand3"
 
-#message: '&#FFD700&lUnknown command!'
-#message: '&l&gradient:#FFD700:#FFA500:#FF8C00:#FF6347&Unknown command!'
+# SINGLE HEX & GRADIENT EXAMPLES
+#'&#FFD700&lUnknown command!'
+#'&l&gradient:#FFD700:#FFA500:#FF8C00:#FF6347&Unknown command!'
