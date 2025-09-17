@@ -1,6 +1,5 @@
 package org.gangsta.customUnknownCMD;
 
-import java.io.File;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -10,8 +9,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.help.HelpTopic;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.gangsta.customUnknownCMD.util.ColorUtil;
 import org.gangsta.customUnknownCMD.commands.UnknownCMDCommand;
+import org.gangsta.customUnknownCMD.util.ColorUtil;
+
+import java.io.File;
 
 public class CustomUnknownCMD extends JavaPlugin implements Listener {
     FileConfiguration config;
@@ -35,9 +36,13 @@ public class CustomUnknownCMD extends JavaPlugin implements Listener {
 
         UnknownCMDCommand commandExecutor = new UnknownCMDCommand(this);
         getCommand("unknowncmd").setExecutor(commandExecutor);
+        getCommand("unknowncmd").setTabCompleter(commandExecutor);
+
     }
 
     public void loadConfigValues() {
+        reloadConfig();
+        this.config = getConfig();
         this.Message = ColorUtil.colorize(this.config.getString("message", "&cUnknown Command!"));
     }
 
